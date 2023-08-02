@@ -1,0 +1,211 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=1024, initial-scale=0.4">
+  <title>Apple-Landing-Page-NaveenVeeravalli</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat Alternates", sans-serif;
+    }
+    section {
+      position: relative;
+      max-width: 100%;
+      min-height: 100vh;
+      padding: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 100px;
+    }
+    header .logo {
+      position: relative;
+      max-width: 40px;
+    }
+    header ul {
+      position: relative;
+      display: flex;
+    }
+    header ul li {
+      list-style: none;
+    }
+    header ul li a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      margin-left: 40px;
+    }
+    .content {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .content .textbox {
+      position: relative;
+      max-width: 600px;
+    }
+    .content .textbox h2 {
+      color: #333;
+      padding-bottom: 15px;
+      font-size: 2em;
+      line-height: 1.4em;
+      font-weight: 600;
+    }
+    .content .textbox h2 span {
+      color: #000000;
+      font-size: 2em;
+      font-weight: 1000;
+    }
+    .content .textbox p {
+      color: #333;
+      padding-bottom: 20px;
+    }
+    .content .textbox a {
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      color: white;
+      background-color: #000000;
+      letter-spacing: 1px;
+      font-weight: 900;
+    }
+    .content .imgbox {
+      display: flex;
+      width: 600px;
+      justify-content: flex-end;
+      margin-left: auto;
+      margin-top: 50px;
+    }
+    .content .imgbox img {
+      max-width: 500px;
+    }
+    .thumb {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      display: flex;
+    }
+    .thumb li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .thumb li:hover {
+      transform: translateY(-15px);
+    }
+    .thumb li img {
+      max-width: 60px;
+    }
+    i {
+      color: white;
+    }
+    i:hover {
+      cursor: pointer;
+      zoom: 175%;
+    }
+    .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #212121;
+      clip-path: circle(600px at right 800px);
+    }
+    .thumb-credits {
+      position: absolute;
+      left: 100px;
+      bottom: 20px;
+      transform: translateY(-50%);
+      font-size: 1em;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    .thumb-credits:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="images/logo.png" class="logo" /></a>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Menu</a></li>
+        <li><a>What's new</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textbox">
+        <h2><span>Apple Watch</span></h2>
+        <h2>Stay connected, Stay stylish.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+          provident blanditiis delectus quibusdam fugit, dicta nostrum,
+          corporis minima consequatur beatae aperiam quasi laudantium quae,
+          sapiente error debitis porro vero sit earum iure perspiciatis aut
+          distinctio ad commodi! Iste libero ab voluptatum iure,
+          exercitationem impedit nostrum.
+        </p>
+        <a href="#">CheckOut</a>
+      </div>
+      <div class="imgbox">
+        <img src="images/2.png" class="slider" />
+      </div>
+    </div>
+    <p class="thumb-credits" onclick="window.location.href='https://github.com/suryanavv'">Created by Naveen Veeravalli </p>
+    <ul class="thumb">
+      <li>
+        <img
+          src="images/b1.png"
+          onclick="imgslider('images/1.png'); changeColor('#eb5955')"
+        />
+      </li>
+      <li>
+        <img
+          src="images/b2.png"
+          onclick="imgslider('images/2.png'); changeColor('#212121')"
+        />
+      </li>
+      <li>
+        <img
+          src="images/b3.png"
+          onclick="imgslider('images/3.png'); changeColor('#b29a99')"
+        />
+      </li>
+    </ul>
+  </section>
+  <script>
+    function imgslider(anything) {
+      document.querySelector(".slider").src = anything;
+    }
+    function changeColor(color) {
+      const col = document.querySelector(".circle");
+      col.style.background = color;
+    }
+  </script>
+</body>
+</html>
