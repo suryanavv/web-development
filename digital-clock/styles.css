@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+    color: #000;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000;
+    overflow: hidden;
+}
+
+.dark-mode .container {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .col {
+    border: 1px solid #fff;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#clock {
+    font-size: 10em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#date {
+    font-size: 2em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#day {
+    font-size: 2em;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.col:first-child {
+    width: 600px;
+    height: 200px;
+}
+
+#date-container,
+#day-container {
+    width: 10%;
+    height: 15%;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#toggleButton {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toggleButton:focus {
+    outline: none;
+}
+
+#iconContainer {
+    display: flex;
+    align-items: center;
+}
+
+#sunIcon,
+#moonIcon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+#sunIcon {
+    display: none;
+}
